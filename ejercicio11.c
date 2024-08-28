@@ -9,120 +9,118 @@
 
 /*
  *
+ *
+ *
+ *
+ *
+ *
  */
-float litros_a_galones(int litros);
+double litros_a_galones(double litros);
 
-float galones_a_litros(int galones);
+double galones_a_litros(double galones);
 
-float millas_a_kilometros(int millas);
+double millas_a_kilometros(double millas);
 
-float kilometros_a_millas(int kilometros);
+double kilometros_a_millas(double kilometros);
 
 
 int main()
 {
 
-int eleccion=0;
-        float resultado;
-        int variable;
-        printf("ingrese: \n1 para litro a galones \n2 para galones a kilometros \n3 millas a kilometros \n4 kilometros a millas\n: ");
+        int eleccion=0;
+        double resultado;
+        double variable;
+        printf("ingrese: \n1 para litro a galones \n2 para galones a kilometros \n3 millas a kilometros \n4 kilometros a millas: ");
         scanf("%d", &eleccion);
     
         printf("ingrese el numero a convertir: ");
         scanf("%d", &variable);
-        switch (eleccion)
+        
+        
+        if (eleccion==1)
         {
-        case 1:
-    
             resultado=litros_a_galones(variable);
-            break;
-    
-        case 2:
-    
+            
+        }
+        else if (eleccion==2)
+        {
             resultado=galones_a_litros(variable);
-            break;
-    
-        case 3:
-    
+            
+        }
+        else if (eleccion==3)
+        {
             resultado=millas_a_kilometros(variable);
-            break;
-    
-        case 4:
-
+            
+        }
+        else if (eleccion==4)
+        {
             resultado=kilometros_a_millas(variable);
-            break;
-    
-        default:
-    
-            printf("ERROR \"valor invalido\" ");
-            break;
+            
+        }
+        else
+        {
+            printf("ERROR \"valor invalido\" \n");
+            
     
         }
     
-        if (eleccion!=0)
-            printf("el resultado es de %f", resultado);
+       
+        printf("el resultado es de %f \n", resultado);
 
 }
 
 /*
-La funcion @litros_a_galones, tiene la variable @litros, cual hace la convercion directa a galones 
-dividiendo los litros por 3.78541
-
-PRE-CONDICION: valor en litros
-POST-CONDICION: valor en galones
+La funcion @litros_a_galones recibe un valor de litros y lo convierte en galones
+@param litros: Numero tipo double
+@return: Numero tipo double
 */
 
-float litros_a_galones(int litros)
+double litros_a_galones(double litros)
 {
-        float galones;
+        double galones;
         galones=litros/3.78541;
     
         return galones;
 }
 
 /*
-La funcion @galones_a_litros, tiene la variable @galones, cual hace la convercion directa a litros
-multiplicando los galones por 3.78541
-
-PRE-CONDICION: valor en galones
-POST-CONDICION: valor en litros
+La funcion @galones_a_litros recibe un valor de galones y lo convierte en litros
+@param galones: Numero tipo double
+@return Numero tipo double
 */
 
-float galones_a_litros(int galones)
+double galones_a_litros(double galones)
 {
-        float litros;
+        double litros;
         litros=galones*3.78541;
     
         return litros;
 }
 
 /*
-La funcion @millas_a_kilometros, tiene la variable @millas, cual hace la convercion directa a kilometros
-multiplicando los millas por 1.60934
+La funcion @millas_a_kilometros recibe un valor en millas y lo convierte en kilometros
 
-PRE-CONDICION: valor en millas
-POST-CONDICION: valor en kilometros
+@param millas: Numero tipo double
+@return: Numero tipo double
 */
 
-float millas_a_kilometros(int millas)
+double millas_a_kilometros(double millas)
 {
-        float kilometros;
+        double kilometros;
         kilometros=millas*1.60934;
     
         return kilometros;
 }
 
 /*
-La funcion @kilometros_a_millas, tiene la variable @kilometros, cual hace la convercion directa a millas
-dividiendo los kilometros por 1.60934
-
-PRE-CONDICION: valor en kilometros
-POST-CONDICION: valor en millas
+La funcion @kilometros_a_millas recibe un valor en kilometros y lo trasnforma en millas
+@param kilometros: Numero tipo double
+@return: Numero tipo double
 */
 
-float kilometros_a_millas(int kilometros)
+double kilometros_a_millas(double kilometros)
 {
-        float millas;
+        double millas;
         millas=kilometros/1.60934;
     
         return millas;

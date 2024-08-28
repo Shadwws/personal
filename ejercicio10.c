@@ -9,7 +9,9 @@
 #include <stdbool.h>
 /*
  *
- */int suma_fibonacci(int numero);
+ */
+
+int suma_fibonacci(int numero);
 
 
 int main()
@@ -25,6 +27,13 @@ int main()
 	printf("%d\n", resultado);
 	return 0;
 }
+/*
+ *La funcion suma_fibonacci recibe un numero y realiza la suma 
+ *de los primeros n numeros de la serie fibonacci, n el numero recibido
+ *@param numero: numero entero positivo
+ *@return numero entero positivo
+ */
+
 int suma_fibonacci(int n)
 {
 	int resultado_suma=0;

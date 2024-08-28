@@ -11,29 +11,30 @@
  *
  */
 
-int cargar_arreglo(int capacidad, int arreglo[]);
+void cargar_arreglo(int capacidad, int arreglo[]);
 
-int muestra_arreglo(int capacidad, int arreglo[]);
+void muestra_arreglo(int capacidad, int arreglo[]);
 
-int fusion_arreglo(int arreglo1[], int arreglo2[], int capacidad1, int capacidad2, int arreglo_resultante[]);
+void fusion_arreglo(int arreglo1[], int arreglo2[], int capacidad1, int capacidad2, int arreglo_resultante[]);
 
-int operacion_arreglo( int arreglo[], int capacidad);
+void operacion_arreglo( int arreglo[], int capacidad);
 
-float promedio(int arreglo[], int capacidad);
+double promedio(int arreglo[], int capacidad);
 
 int valor_minimo(int arreglo[], int capacidad);
 
 int posición_del_valor_maximo(int arreglo[], int capacidad);
 
-int ordenar(int arreglo[], int capacidad);
+void ordenar(int arreglo[], int capacidad);
 
-int main()
+void main()
 {
+    int salida=1;
     int operacion;
     int capacidad1;
     int capacidad2;
     int eleccion_funcion;
-    printf("BIENVENIDO!!\nIngrese la capaciodad del primer arreglo que desea ingresar por favor: ");
+    printf("BIENVENIDO!!\nIngrese la capacidad del primer arreglo que desea ingresar por favor: ");
     scanf("%d", &capacidad1);
     int arreglo1[capacidad1];
     cargar_arreglo(capacidad1, arreglo1);
@@ -44,75 +45,107 @@ int main()
     int arreglo2[capacidad2];
     cargar_arreglo(capacidad2, arreglo2);
 
-    printf("ingrese un numero para seguir.\n1-Para mostrar los arreglos\n2-Para fusionar los arreglos\n3-Para operar con los arreglos:\n");
-    scanf("%d", &eleccion_funcion);
 
-    if (eleccion_funcion==1)
+    while (salida==1)
     {
-        printf("El arreglo 1 contiene: \n");
-        muestra_arreglo(capacidad1, arreglo1);
+        printf("ingrese un numero para seguir.\n1-Para mostrar los arreglos\n2-Para fusionar los arreglos\n3-Para operar con los arreglos:\n");
+        scanf("%d", &eleccion_funcion);
 
-        printf("El arreglo 2 : \n");
-        muestra_arreglo(capacidad2, arreglo2);
-    }
-
-    else if(eleccion_funcion==2)
-    {
-        int capacidad3=capacidad1+capacidad2;
-        int arreglo_resultante[capacidad3];
-
-        fusion_arreglo(arreglo1, arreglo2, capacidad1, capacidad2, arreglo_resultante);
-    }
-
-    else if(eleccion_funcion==3)
-    {
-        printf("Ingrese 1 para operar con el arreglo 1\nIngrese 2 para operar con el arreglos 2 \n");
-        scanf("%d", &operacion);
-
-        if (operacion==1)
+        if (eleccion_funcion==1)
         {
-        operacion_arreglo(arreglo1, capacidad2);
+            printf("El arreglo 1 contiene: \n");
+            muestra_arreglo(capacidad1, arreglo1);
+
+            printf("El arreglo 2 : \n");
+            muestra_arreglo(capacidad2, arreglo2);
         }
 
-        else if(operacion==2)
+        else if(eleccion_funcion==2)
         {
-        operacion_arreglo(arreglo1, capacidad2);
+            int capacidad3=capacidad1+capacidad2;
+            int arreglo_resultante[capacidad3];
+
+            fusion_arreglo(arreglo1, arreglo2, capacidad1, capacidad2, arreglo_resultante);
+            muestra_arreglo(capacidad3, arreglo_resultante);
+        }
+
+        else if(eleccion_funcion==3)
+        {
+            printf("Ingrese 1 para operar con el arreglo 1\nIngrese 2 para operar con el arreglos 2 \n");
+            scanf("%d", &operacion);
+
+            if (operacion==1)
+            {
+            operacion_arreglo(arreglo1, capacidad1);
+            }
+
+            else if(operacion==2)
+            {
+            operacion_arreglo(arreglo2, capacidad2);
+            }
+
+            else
+            {
+                printf("Valor invalido!!");
+            }
+
         }
 
         else
         {
-            printf("Valor invalido!!");
+            printf("ERROR: Valor invalido!!");
         }
 
-    }
-
-    else
-    {
-        printf("ERROR: Valor invalido!!");
+        printf("Desea salir?\ningrese 0 para si y 1 para no: ");
+        scanf("%d", &salida);
     }
 }
 
-int cargar_arreglo(int capacidad, int arreglo[])
+/*
+* la funcion @cargar_arreglo 
+* 
+* @param capacidad:
+* @param arreglo:
+*/
+
+void cargar_arreglo(int capacidad, int arreglo[])
 {
     for (int i = 0; i < capacidad; i++) 
     {
         printf("Ingrese el valor para la posicion %d: ", i);
         scanf("%d", &arreglo[i]);
     }
-    return(0);
 }
 
-int muestra_arreglo(int capacidad, int arreglo[])
+
+/*
+* la funcion @muestra_arreglo 
+* 
+* @param capacidad:
+* @param arreglo:
+*/
+
+void muestra_arreglo(int capacidad, int arreglo[])
 {
-    int i;
-    for ( i=0; i <= capacidad; i++) 
+    int i=0;
+    while (i != capacidad) 
     {
         printf("valor %d: %d \n", i, arreglo[i]);
+        i++;
     }
-    return 0;
 }
 
-int fusion_arreglo(int arreglo1[], int arreglo2[], int capacidad1, int capacidad2, int arreglo_resultante[])
+/*
+* la funcion @muestra_arreglo 
+* 
+* @param capacidad1:
+* @param arreglo1:
+* @param capacidad:2
+* @param arreglo2:
+* @param arreglo_resultante:
+*/
+
+void fusion_arreglo(int arreglo1[], int arreglo2[], int capacidad1, int capacidad2, int arreglo_resultante[])
 {
 
     int i;
@@ -126,10 +159,17 @@ int fusion_arreglo(int arreglo1[], int arreglo2[], int capacidad1, int capacidad
         arreglo_resultante[capacidad1 + i] = arreglo2[i];
     }
 
-    return(0);
 }
 
-int operacion_arreglo( int arreglo[], int capacidad)
+/*
+* la funcion @operacion_arreglo 
+* 
+* @param capacidad:
+* @param arreglo:
+* @return
+*/
+
+void operacion_arreglo( int arreglo[], int capacidad)
 {
     int resultado;
     float promedio_resultado;
@@ -160,7 +200,7 @@ int operacion_arreglo( int arreglo[], int capacidad)
 
     else if(operacion==4)
     {
-        resultado=ordenar(arreglo, capacidad);
+        ordenar(arreglo, capacidad);
 
     }
 
@@ -169,19 +209,36 @@ int operacion_arreglo( int arreglo[], int capacidad)
         printf("ERROR, valor invalido");
     }
     
-    return resultado;
 }
 
-float promedio(int arreglo[], int capacidad)
+/*
+* la funcion @promedio 
+* 
+* @param capacidad:
+* @param arreglo:
+* @return
+*/
+
+double promedio(int arreglo[], int capacidad)
 {
+    double resultado = 0.0;
     int suma = 0;
     for (int i = 0; i < capacidad; i++) 
     {
         suma += arreglo[i];
     }
-    
-    return (float)suma/capacidad;
+    resultado= suma/capacidad;
+
+    return resultado;
 }
+
+/*
+* la funcion @valor_minimo 
+* 
+* @param capacidad:
+* @param arreglo:
+* @return
+*/
 
 int valor_minimo(int arreglo[], int capacidad)
 {
@@ -198,6 +255,14 @@ int valor_minimo(int arreglo[], int capacidad)
     return resultado;
 }
 
+/*
+* la funcion @posición_del_valor_maximo 
+* 
+* @param capacidad:
+* @param arreglo:
+* @return
+*/
+
 int posición_del_valor_maximo(int arreglo[], int capacidad)
 {
     int maximo = arreglo[0];
@@ -213,8 +278,17 @@ int posición_del_valor_maximo(int arreglo[], int capacidad)
     return resultado;
 }
 
-int ordenar(int arreglo[], int capacidad)
+/*
+* la funcion @ordenar 
+* 
+* @param capacidad:
+* @param arreglo:
+* @return
+*/
+
+void ordenar(int arreglo[], int capacidad)
 {
+    
     for (int i = 0; i < capacidad ; i++) 
     {
         for (int j = 0; j < capacidad - i ; j++) 
@@ -227,9 +301,8 @@ int ordenar(int arreglo[], int capacidad)
             } 
         }
     }
-    for (int k = 1; k <= capacidad; k++) 
+    for (int k = 0; k <= capacidad; k++) 
     {
         printf(" %d \n", arreglo[k]);
     }
-    return 0;
 }

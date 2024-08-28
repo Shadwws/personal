@@ -31,7 +31,7 @@ int main()
 }
 
 /*
-* la funcion @numero defectivo recibe un numero entero positivo
+* la funcion @numero_defectivo recibe un numero entero positivo
 * y comprueba si este es defectivo
 * @param numero: numero entero positivo
 * @return booleano

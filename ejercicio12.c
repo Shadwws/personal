@@ -26,6 +26,14 @@ int main()
         return 0;
 }
 
+
+/*
+* la funcion @numero_perfecto recibe un numero entero positivo
+* y comprueba si este es perfecto
+* @param numero: numero entero positivo
+* @return booleano
+*/
+
 bool numero_perfecto(int numero)
 {
         int i=1;
