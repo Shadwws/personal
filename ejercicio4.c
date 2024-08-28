@@ -35,7 +35,15 @@ int main()
 
 	return 0;
 }
-
+/*
+*La funcion @mayor_que_3 recibe 3 numeros enteros y los compara
+*para devolver el mayor de los 3
+*@param numero1: Numero entero
+*@param numero2: Numero entero
+*@param numero3: Numero entero
+*@return Numero entero
+*
+*/
 int mayor_que_3(int numero1, int numero2, int numero3)
 {
 

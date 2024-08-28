@@ -11,7 +11,14 @@
  *
  */
 
-int main()
+
+/*
+*La funcion @main te permite a traves de consola ingresar
+*un valor numerico para imprimir en la terminal una "tabla de multiplicar"
+*con el resultado de la multiplicacion del numero ingresado por 1 hasta 10
+*
+*/
+void main()
 {
 
 	int numero=0;

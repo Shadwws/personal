@@ -41,6 +41,15 @@ int main()
 }
 
 
+
+
+
+/*
+*La funcion @contador_de_digitos recibe un numero entero positivo
+*para contar los digitos y retornarlo
+*@param numero: Numero entero positivo
+*@return numero entero positivo
+*/
 int contador_de_digitos (int numero)
 {
    int digitos;

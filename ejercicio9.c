@@ -26,6 +26,12 @@ int main()
 	printf("%s", resultado ? "true\n" : "false\n");
 	return 0;
 }
+/*
+* la funcion @es_fibonacci recibe un numero y comprueba si este aparece en la serie
+* @param numero: numero entero positivo
+* @return booleano
+*/
+
 
 bool es_fibonacci(int numero)
 {

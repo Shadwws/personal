@@ -27,6 +27,13 @@ int main()
 
 
 }
+/*
+*La funcion @suma_de_digitos recibe un numero entero positivo
+*para poder sumar los digitos y retornar el resultado
+*@param numero:Numero entero positivo
+*@return Numero entero positivo
+*/
+
 
 int suma_de_digitos( int numero)
 {

@@ -30,6 +30,15 @@ int main()
 	return 0;
 }
 
+/*
+* la funcion @numero defectivo recibe un numero entero positivo
+* y comprueba si este es defectivo
+* @param numero: numero entero positivo
+* @return booleano
+*/
+
+
+
 bool numero_defectivo( int numero)
 {
 	int i=1;

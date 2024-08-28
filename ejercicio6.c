@@ -29,6 +29,13 @@ int main()
 	return 0;
 }
 
+/*
+*La funcion  @suma_primo recibe un valor y suma los n
+* primeros numero primos para retornar el resultado 
+*@param n: numero entero positivo
+*@return n: numero entero positivo
+*/
+
 int suma_primo(int n)
 {
 	n+=1;
@@ -44,6 +51,14 @@ int suma_primo(int n)
 
 	return resultado;
 }
+
+/*
+*La funcio @es_primo recibe un numero y comprueba si
+*es primo, en caso de no ser retorna 0
+*@param numero: numero entero positivo
+*@return numero entero positivo
+*/
+
 int es_primo(int numero)
 {
 	int resultado=0;

@@ -32,6 +32,14 @@ int main()
 
 	return 0;
 }
+/*
+* La funcion @potencia recibe una base y exponente para realiza multiples multiplicaciones
+* en funcion de la base y exponente dado
+* @param base: numero entero
+* @param exponente: numero entero positivo
+* @return numero entero
+*/
+
 
 int potencia(int base, int exponente)
 {
@@ -105,6 +113,14 @@ int potencia(int base, int exponente)
     	return resultado;
 
 }
+/*
+* La función @multiplicacion, recibe 2 numeros y realizar la operación de multiplicar
+* de ambos numeros pero con sumas
+* @param numero1: Numero entero
+* @param numero2: Numero entero
+* @return Numero entero
+*/
+
 
 int multiplicacion(int numero1, int numero2)
 {
