@@ -14,6 +14,10 @@
 
 int contador_de_digitos (int numero);
 
+/*
+* la funcion @main se encarga de llamar las funciones e imprimir en terminal
+*/
+
 int main()
 {
    int digitos=0;

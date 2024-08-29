@@ -14,6 +14,10 @@
 
 int suma_de_digitos( int numero);
 
+/*
+* la funcion @main se encarga de llamar las funciones e imprimir en terminal
+*/
+
 int main()
 {
 	int numero;

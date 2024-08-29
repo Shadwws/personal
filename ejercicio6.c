@@ -14,6 +14,9 @@
 int suma_primo(int n);
 int es_primo(int numero);
 
+/*
+* la funcion @main se encarga de llamar las funciones e imprimir en terminal
+*/
 
 int main()
 {

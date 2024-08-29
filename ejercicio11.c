@@ -23,6 +23,9 @@ double millas_a_kilometros(double millas);
 
 double kilometros_a_millas(double kilometros);
 
+/*
+* la funcion @main se encarga de llamar las funciones e imprimir en terminal
+*/
 
 int main()
 {

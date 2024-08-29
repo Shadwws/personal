@@ -13,6 +13,10 @@
 
 int menor_que_3(int numero1, int numero2, int numero3);
 
+/*
+* la funcion @main se encarga de llamar las funciones e imprimir en terminal
+*/
+
 int main()
 {
 	int primer=0;

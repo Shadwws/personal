@@ -14,6 +14,11 @@
 
 bool numero_perfecto(int numero);
 
+/*
+* la funcion @main se encarga de llamar las funciones e imprimir en terminal
+*/
+
+
 int main()
 {
 	int variable;

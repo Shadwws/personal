@@ -27,6 +27,10 @@ int posición_del_valor_maximo(int arreglo[], int capacidad);
 
 void ordenar(int arreglo[], int capacidad);
 
+/*
+* la funcion @main se encarga de llamar las funciones e imprimir en terminal
+*/
+
 void main()
 {
     int salida=1;
@@ -102,10 +106,10 @@ void main()
 }
 
 /*
-* la funcion @cargar_arreglo 
-* 
-* @param capacidad:
-* @param arreglo:
+* la funcion @cargar_arreglo recibe un arreglo de numeros junto a su capacidad, permitiendo
+* llenar con valores hasta completar la capacidad
+* @param capacidad:numero entero positivo
+* @param arreglo:arreglo de numeros
 */
 
 void cargar_arreglo(int capacidad, int arreglo[])
@@ -119,10 +123,10 @@ void cargar_arreglo(int capacidad, int arreglo[])
 
 
 /*
-* la funcion @muestra_arreglo 
-* 
-* @param capacidad:
-* @param arreglo:
+* la funcion @muestra_arreglo recibe un arreglo de numeros junto a su capacidad 
+* y mostrandolo por terminal el arreglo
+* @param capacidad:numero entero positivo
+* @param arreglo:arreglo de numeros
 */
 
 void muestra_arreglo(int capacidad, int arreglo[])
@@ -136,13 +140,13 @@ void muestra_arreglo(int capacidad, int arreglo[])
 }
 
 /*
-* la funcion @muestra_arreglo 
-* 
-* @param capacidad1:
-* @param arreglo1:
-* @param capacidad:2
-* @param arreglo2:
-* @param arreglo_resultante:
+* la funcion @fusion_arreglo recibe tres arreglos con las capacidades de los dos a fusionar y uno donde se guardara  
+* la fusion de este
+* @param capacidad1:numero entero positivo
+* @param arreglo1:arreglo de numeros
+* @param capacidad2: numero entero positivo
+* @param arreglo2:arreglo de numeros
+* @param arreglo_resultante: arreglo de numeros
 */
 
 void fusion_arreglo(int arreglo1[], int arreglo2[], int capacidad1, int capacidad2, int arreglo_resultante[])
@@ -162,11 +166,10 @@ void fusion_arreglo(int arreglo1[], int arreglo2[], int capacidad1, int capacida
 }
 
 /*
-* la funcion @operacion_arreglo 
-* 
-* @param capacidad:
-* @param arreglo:
-* @return
+* la funcion @operacion_arreglo recibe un arreglo y funciona como un main, para llamar funciones
+* y mostrar por terminal
+* @param capacidad: numero entero positivo
+* @param arreglo:arreglo de numeros
 */
 
 void operacion_arreglo( int arreglo[], int capacidad)
@@ -212,10 +215,10 @@ void operacion_arreglo( int arreglo[], int capacidad)
 }
 
 /*
-* la funcion @promedio 
-* 
-* @param capacidad:
-* @param arreglo:
+* la funcion @promedio recibe un arreglo de numeros y despues
+* saca un promedio con todos los valores
+* @param capacidad: numero entero positivo
+* @param arreglo:arreglo de numeros
 * @return
 */
 
@@ -233,10 +236,10 @@ double promedio(int arreglo[], int capacidad)
 }
 
 /*
-* la funcion @valor_minimo 
-* 
-* @param capacidad:
-* @param arreglo:
+* la funcion @valor_minimo recube un arreglo de nnumeros
+* y retorna el numero menor del arreglo
+* @param capacidad: numero entero positivo
+* @param arreglo:arreglo de numeros
 * @return
 */
 
@@ -256,11 +259,11 @@ int valor_minimo(int arreglo[], int capacidad)
 }
 
 /*
-* la funcion @posición_del_valor_maximo 
-* 
-* @param capacidad:
-* @param arreglo:
-* @return
+* la funcion @posición_del_valor_maximo recibe un arreglo de numeros
+* y encuentra la posicion del numero mayor
+* @param capacidad:numero entero positivo
+* @param arreglo:arreglo de numeros
+* @return numero entero positivo
 */
 
 int posición_del_valor_maximo(int arreglo[], int capacidad)
@@ -279,11 +282,10 @@ int posición_del_valor_maximo(int arreglo[], int capacidad)
 }
 
 /*
-* la funcion @ordenar 
-* 
-* @param capacidad:
-* @param arreglo:
-* @return
+* la funcion @ordenar recibe un arreglo de numeros y lo ordena  
+* de menor a mayor y luego lo imprime en pantalla
+* @param capacidad: numero entero positivo
+* @param arreglo: arreglo de numeros
 */
 
 void ordenar(int arreglo[], int capacidad)

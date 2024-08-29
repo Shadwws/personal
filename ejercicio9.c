@@ -12,6 +12,9 @@
  */
 bool es_fibonacci(int numero);
 
+/*
+* la funcion @main se encarga de llamar las funciones e imprimir en terminal
+*/
 
 int main()
 {

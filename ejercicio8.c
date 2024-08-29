@@ -15,6 +15,10 @@
 
 bool numero_defectivo( int numero);
 
+/*
+* la funcion @main se encarga de llamar las funciones e imprimir en terminal
+*/
+
 int main()
 {
 	int numero = 0;

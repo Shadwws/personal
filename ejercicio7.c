@@ -13,6 +13,9 @@
 int potencia(int base, int exponente);
 int multiplicacion(int numero1, int numero2);
 
+/*
+* la funcion @main se encarga de llamar las funciones e imprimir en terminal
+*/
 
 int main()
 {
